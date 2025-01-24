@@ -27,7 +27,12 @@ jobs:
           run: |
             choco install mysql --version=8.0.27 -y
             Start-Service mysql
-            mysql -u root -e "ALTER USER 'root'@'localhost'IDENTIFIED WITH mysql_native_password BY 'root';" mysql -u root -proot -e "CREATE DATABASE lumen_db;"
+            mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
+            mysql -u root -proot -e "CREATE DATABASE lumen_db;"
+    - name: Verificar MySQL
+      run: |
+        mysql -u root -proot -e "SHOW DATABASES;"oot -e "ALTER USER 'root'@'localhost'IDENTIFIED WITH mysql_native_password BY 'root';" mysql -u root -proot -e "CREATE DATABASE lumen_db;"
+        
     test:
       runs-on: windows-latest
       needs: [bluid]
