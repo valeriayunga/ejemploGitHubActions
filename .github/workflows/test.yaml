@@ -15,6 +15,12 @@ jobs:
       steps:
         - name: texto
           run: echo "Counstruir"
+        - name: installar PHP y composer
+          run: |
+            choco install php --version=8.1
+            choco install composer
+            php -v
+            composer --version
     test:
       runs-on: windows-latest
       needs: [bluid]
