@@ -15,5 +15,11 @@ jobs:
       steps:
         - name: texto
           run: echo "Counstruir"
+    test:
+      runs-on: windows-latest
+      needs: [bluid]
+      steps:
+        - name: test
+          run: echo "Test"
             
-           
+          
