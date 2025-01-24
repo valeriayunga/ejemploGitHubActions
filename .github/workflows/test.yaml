@@ -9,6 +9,11 @@ jobs:
       steps:
         - name: mostrar texto
           run: echo "Hola mundo"
-        
+    bluid:
+      runs-on: windows-latest
+      needs: [inicio]
+      steps:
+        - name: texto
+          run: echo "Counstruir"
             
            
