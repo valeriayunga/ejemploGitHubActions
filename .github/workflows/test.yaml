@@ -23,7 +23,10 @@ jobs:
             choco install composer
             php -v
             composer --version
-    test:
+        - name: Installar MySql
+          run: |
+            choco install mysql 
+            Start-Service mysql
       runs-on: windows-latest
       needs: [bluid]
       steps:
