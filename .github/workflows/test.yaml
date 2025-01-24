@@ -7,8 +7,10 @@ jobs:
       runs-on: windows-latest
       #Pasos:
       steps:
-        - name: mostrar texto
-          run: echo "Hola mundo"
+        - name: texto
+          run: echo "Pasos para clonar repositorios a github actions"
+        - name: Checkout
+          uses: actions/checkout@v4.2.2
     bluid:
       runs-on: windows-latest
       needs: [inicio]
